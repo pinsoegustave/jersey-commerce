@@ -1,3 +1,4 @@
+import { IProduct } from "@/app/admin/products/page";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
