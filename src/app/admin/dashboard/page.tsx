@@ -1,4 +1,5 @@
 "use client"
+import Popup from '@/components/admin-panel/Popup';
 import ProductRow from '@/components/admin-panel/ProductRow';
 import { setLoading } from '@/redux/features/loadingSlice';
 import { useAppDispatch } from '@/redux/hooks';
@@ -17,8 +18,8 @@ export interface IProduct {
 const Dashboard = () => { 
 
   const [ products, setProducts ] = useState([]);
-  const [ openPopup, setOpenPopup ] = useState();
-  const [ updateTable, setUpdateTable ] = useState();
+  const [ openPopup, setOpenPopup ] = useState(false);
+  const [ updateTable, setUpdateTable ] = useState(false);
 
   const dispatch = useAppDispatch();
 
@@ -61,6 +62,7 @@ const Dashboard = () => {
           </table>
         </div>
       </div>
+      { openPopup && ( <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />)}
     </div>
   )
 }
