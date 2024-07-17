@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import ProductCard from './ProductCard';
 
 interface IProduct {
     _id: string;
@@ -40,7 +41,7 @@ const TrendingProducts = () => {
             { products.map((item: IProduct) => (
                 <ProductCard 
                     key={item._id}
-                    _id={item._id}
+                    id={item._id}
                     img={item.imgSrc}
                     category={item.category}
                     title={item.name}
