@@ -1,7 +1,8 @@
-import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { useAppSelector } from '@/redux/hooks';
 import React, { Dispatch, SetStateAction } from 'react'
 import { RxCross1 } from 'react-icons/rx';
 import CartProduct from './CartProduct';
+import Link from 'next/link';
 
 interface PropsType {
     setShowCart: Dispatch<SetStateAction<boolean>>;
@@ -46,9 +47,11 @@ const Cart = ({ setShowCart}: PropsType) => {
             <button className='bg-black text-white text-center w-full rounded-3xl py-2 hover:bg-accent mb-4 mt-4'>
                 View Cart
             </button>
-            <button className='bg-black text-white text-center w-full rounded-3xl py-2'>
+            <Link href={`/payment?amount=${getTotal()}`}>
+            <button  className='bg-black text-white text-center w-full rounded-3xl py-2 hover:bg-accent'>
                 Checkout
             </button>
+            </Link>
         </div>
     </div>
   )
