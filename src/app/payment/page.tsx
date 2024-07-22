@@ -3,7 +3,6 @@ import CheckoutPage from '@/components/CheckoutPage';
 import convertToSubcurrency from '@/libs/ConvertToSubcurrency';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js'
-import { useParams } from 'next/navigation';
 import React from 'react'
 
 if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
