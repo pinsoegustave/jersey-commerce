@@ -10,7 +10,7 @@ const Signup = () => {
         <h2 className='py-10 text-[20px] font-semibold'>Jersey Commerce</h2>
       </div>
       <div className='px-10 py-4 border border-foreground/50'>
-      <h2 className="bold-32 text-3xl">Create account.</h2>
+      <h2 className="bold-32 text-2xl py-4">Create account.</h2>
       <form action="" className="animate-in flex-1 flex flex-col w-full justify-center mx-auto gap-2 text-foreground ">
         <label className="text-md" htmlFor="name">
           Preferred username
@@ -63,8 +63,8 @@ const Signup = () => {
             {/* {searchParams.message} */}
           </p>
         {/* )} */}
-        <p>Already have an account?<Link href="/login" className="rounded-md no-underline text-foreground text-md text-blue-400">
-         Sign in here
+        <p>Already have an account?<Link href="/signin" className="rounded-md no-underline text-foreground text-md text-blue-400">
+         Sign in
         </Link></p>
       </form>
       </div>
