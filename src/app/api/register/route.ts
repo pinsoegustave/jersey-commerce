@@ -25,10 +25,12 @@ export async function POST (req: NextRequest) {
         const salt = await bcryptjs.genSalt(10);
         const hashedPassword = await bcryptjs.hash(password, salt);
 
-        const savedUser = await new User({
+        const newUser = await new User({
             name, email, password: hashedPassword
         });
 
+        const savedUser = await newUser.save();
+        
         return NextResponse.json({
             message: "User created successfully",
             success: true,

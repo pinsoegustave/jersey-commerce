@@ -23,7 +23,7 @@ const Signup = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setLoading(false);
+    setLoading(true);
     console.log(user);
 
     try {
@@ -48,7 +48,7 @@ const Signup = () => {
       if (res.status == 200 || res.status == 201) {
         console.log("User Account Created Successfully");
         setError("");
-        router.push("/");
+        router.push("/signin" );
       }
     } catch (error) {
       console.log(error);
@@ -63,7 +63,7 @@ const Signup = () => {
         // rpassword: "",
       });
      }
-  }
+  };
 
   return (
     <div className="flex-1 flex flex-col w-full mx-auto px-8 sm:max-w-md  justify-center gap-2 py-10">
@@ -109,7 +109,7 @@ const Signup = () => {
           value={user.password}
           onChange={handleInputChange}
         />
-        <label className="text-md" htmlFor="password">
+        {/* <label className="text-md" htmlFor="password">
           Re-enter Password
         </label>
         <input
@@ -120,7 +120,7 @@ const Signup = () => {
           required
           value={user.password}
           onChange={handleInputChange}
-        />
+        /> */}
         <button
           // formAction={signUp}
           className="border border-foreground/20 bg-blue-600 text-white rounded-md px-4 py-2 mb-2 hover:text-black"
