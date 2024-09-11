@@ -44,7 +44,7 @@ const Popup = ({ setOpenPopup, setUpdateTable }: PropsType) => {
             onClick={() => setOpenPopup(false)}
             />
 
-            <h2 className="text-2xl -mt-3 ">Edit Product</h2>
+            <h2 className="text-2xl">Edit Product</h2>
             <form className="mt-6 w-fit space-y-4 mx-auto" onSubmit={handleSubmit}>
                 <input 
                 className="border block border-gray-500 outline-none px-4 py-2 rounded-lg w-fit"
